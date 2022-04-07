@@ -1,5 +1,24 @@
 // 1. Write your functions here
+function line(currentLine){
+    if (currentLine.length > 0){
+        let message = `The line is currently:`
+        currentLine.forEach((name, index) => message += ` ${index + 1}. ${name}`)
+        //console.log(message)
+        return message
+    } else return `The line is currently empty.`
+}
 
+function takeANumber(currentLine, name){
+    currentLine.push(name)
+    console.log(`Welcome, ${name}. You are number ${currentLine.length} in line.`)
+}
+
+function nowServing(currentLine){
+    if (currentLine.length > 0){
+        console.log(`Currently serving ${currentLine[0]}.`)
+        currentLine.shift()
+    } else console.log(`There is nobody waiting to be served!`)
+}
 
 // 2. Example Usage
 
